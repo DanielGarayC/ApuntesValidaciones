@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">EventMaster </div>
+        <div class="list-group list-group-flush">
+            <a th:href="@{/eventos}" class="list-group-item list-group-item-action bg-light">Eventos</a>
+            <a th:href="@{/artistas}" class="list-group-item list-group-item-action bg-light">Artistas</a>
+            <a th:href="@{/contacto}" class="list-group-item list-group-item-action bg-light">Contacto</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper" class="w-100 p-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+        </nav>
+        <div class="container-fluid">
+            <h1 class="mt-4">Bienvenidos a EventMaster</h1>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript for toggling the sidebar -->
+<script>
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.getElementById("sidebar-wrapper").classList.toggle("toggled");
+    });
+</script>
+</body>
+</html>
